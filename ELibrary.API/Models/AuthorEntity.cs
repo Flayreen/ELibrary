@@ -8,5 +8,7 @@ public class AuthorEntity
 
     public string UserName { get; set; } = string.Empty;
     
+    public Guid CourseId { get; set; }
+    
     public CourseEntity? Course { get; set; }
 }

@@ -12,6 +12,7 @@ public class LessonConfiguration : IEntityTypeConfiguration<LessonEntity>
 
         builder
             .HasOne(l => l.Course)
-            .WithMany(c => c.Lessons);
+            .WithMany(c => c.Lessons)
+            .HasForeignKey(l => l.CourseId);
     }
 }
